@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import {useEffect, useState} from "react";
 
 const DateYear = () =>{
@@ -20,11 +21,31 @@ const DateYear = () =>{
         }
     }, []);
 
+
     return(
-        <>
-            <h1>{timerYear}<span>ToDo</span></h1>
-        </>
-    )
+        <Year>
+            <YD>{timerYear}</YD>
+            <YD_span>ToDo</YD_span>
+        </Year>
+    );
 }
+
+const Year = styled.div`
+    margin: 3% 3% 0 3%;
+    padding: 0;
+    display: block;
+`
+
+const YD = styled.h2`
+    margin: 0;
+    line-height: 5rem;
+    font-size: 5rem;
+    display: inline-block;
+`
+const YD_span = styled.span`
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+`
 
 export default  DateYear;

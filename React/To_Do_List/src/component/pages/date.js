@@ -1,7 +1,7 @@
-import styled from 'styled-components'
 import DateDay from "../component/date/dateDay";
 import DateMonth from "../component/date/dateMonth";
 import DateYear from "../component/date/dateYear";
+import DateD from "../component/date/dateD";
 
 const Date = () =>{
     return(
@@ -9,12 +9,10 @@ const Date = () =>{
             <DateYear/>
             <DateDay/>
             <DateMonth/>
+            <DateD/>
         </>
     );
 }
 
 export default Date;
 
-// const DateYear = styled.h1`
-//     font-size: 1rem;
-// `

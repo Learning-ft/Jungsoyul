@@ -1,3 +1,4 @@
+import { styled } from "styled-components";
 import { useEffect, useState } from "react"
 
 const DateMonth = () =>{
@@ -5,7 +6,7 @@ const DateMonth = () =>{
 
     const currentMonth = () =>{
         const date = new Date();
-        const month = String(date.getMonth());
+        const month = String("0" + (date.getMonth() + 1)).slice(-2);
         setMon(`${month}`);
     }
 
@@ -19,10 +20,21 @@ const DateMonth = () =>{
     }, []);
 
     return(
-        <>
-            <h2>{mon}</h2>
-        </>
+        <Month>
+            <DM>{mon}</DM>
+        </Month>
     );
 }
+
+const Month = styled.div`
+    display: inline-block;
+    margin: 0;
+`;
+
+const DM = styled.h3`
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 400;
+`;
 
 export default DateMonth;
