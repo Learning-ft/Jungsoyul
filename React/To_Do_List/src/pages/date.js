@@ -1,10 +1,20 @@
+import styled from 'styled-components'
+import DateDay from "../component/date/dateDay";
+import DateMonth from "../component/date/dateMonth";
+import DateYear from "../component/date/dateYear";
 
 const Date = () =>{
     return(
         <>
-            <h1>날짜 요소를 보여주는 페이지입니다</h1>
+            <DateYear/>
+            <DateDay/>
+            <DateMonth/>
         </>
     );
 }
 
 export default Date;
+
+// const DateYear = styled.h1`
+//     font-size: 1rem;
+// `
