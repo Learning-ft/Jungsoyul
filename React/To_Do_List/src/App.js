@@ -1,8 +1,16 @@
+import './style/App.css';
+import Date from "./pages/date";
+import List from "./pages/list";
+import Shape from "./pages/shape";
+import Test from "./test";
+
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Shape/>
+      <Date/>
+      <List/>
+   </>
   );
 }
 

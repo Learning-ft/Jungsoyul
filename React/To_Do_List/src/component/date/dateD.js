@@ -26,13 +26,13 @@ const DateD = () =>{
     );
 }
 
-const D = styled.h1`
+const D = styled.div`
     font-size: 10rem;
     font-weight: 300;
     display: inline-block;
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 12%;
 `
 
 export default DateD;
