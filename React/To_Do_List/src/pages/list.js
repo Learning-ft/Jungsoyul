@@ -1,18 +1,38 @@
 import { styled } from "styled-components";
-import ListInsert from "../component/list/listInsert";
-// import ListItem from "../component/list/listItem";
-
+import { useState } from "react";
+import TodoBoard from "../component/list/TodoBoard";
 
 const List = () =>{
+    const [inputValue, setInputValue] = useState('  ');//input 정보
+    const [todoList, setTodoList] = useState([]);//리스트 전체 받아오기
+
+
+    const addItem = () =>{
+        setTodoList([...todoList,inputValue])//todoList는 유지하되, 새로운 inputValue넣기
+    }
+
+    const onKeyUp = e => {
+        if(e.key === 'Enter'){
+            setInputValue('  ');
+            addItem();
+        }
+    };
+
+    
     return(
-        <>
-            <Memo>
-            <ListInsert/>
-            {/* <ListItem/> */}
-            </Memo>
-        </>
+        <Memo>
+                <input className="todo-insert"
+                value={inputValue}
+                type="text"
+                placeholder="    Add your new todo"
+                onChange={(e)=>setInputValue(e.target.value)}
+                onKeyUp={onKeyUp}
+                />
+
+            <TodoBoard todoList={todoList}/>
+        </Memo>
     );
-}
+};
 
 const Memo = styled.div`
     margin: 0 auto;

@@ -13,3 +13,67 @@ html, body{
     margin: 0;
     padding: 0;
 }
+
+/* todolist insert */
+
+.todo-insert{
+    display: flex;
+    width: 660px;
+    height: 58px;
+    margin: 34px auto 54px auto;
+    font-size: 1.6rem;
+    border-radius: 30px;
+    background-color: #D9D9D9;
+    opacity: 30%;
+}
+
+/* todolist item */
+.todoList{
+    margin: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1rem;
+}
+
+.todo-item{
+    width: 660px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.checkbox{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border: 3px solid #00000031;
+    border-radius: 10%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.checked{
+    text-decoration: line-through;
+    background-color: #d9d9d9;
+    border: 3px solid #00000031;
+}
+
+.txt{
+    text-decoration: line-through;
+    color: #d9d9d9;
+}
+
+/* del */
+
+.todo-del{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-size: 100%;
+    background-image: url('../component/list/img/del01.png'); 
+    cursor: pointer;   
+}
+
+.del{
+    display: none;
+}
