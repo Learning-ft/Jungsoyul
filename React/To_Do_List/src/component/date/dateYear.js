@@ -25,7 +25,7 @@ const DateYear = () =>{
     return(
         <Year>
             <YD>{timerYear}</YD>
-            <YD_span>ToDo</YD_span>
+            <YDSpan>ToDo</YDSpan>
         </Year>
     );
 }
@@ -42,7 +42,7 @@ const YD = styled.h2`
     font-size: 5rem;
     display: inline-block;
 `
-const YD_span = styled.span`
+const YDSpan = styled.span`
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
