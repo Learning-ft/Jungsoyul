@@ -29,7 +29,7 @@ const DateDay = () => {
 
 const Day = styled.div`
     display: inline-block;
-    margin: 0 3%;
+    margin: 0 1.6% 0 3%;
 `;
 
 const DD = styled.h2`

@@ -28,7 +28,6 @@ const DateMonth = () =>{
 
 const Month = styled.div`
     display: inline-block;
-    margin: 0;
 `;
 
 const DM = styled.h3`
